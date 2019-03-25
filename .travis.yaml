@@ -7,6 +7,9 @@ before_install:
   - apt-get update -y
   - apt-get install ruby -y
   - gem install dpl
+  - gem install bundler
+  - bundle install
+  - bundle exec rake db:create
   - go get github.com/constabulary/gb/...
   - go get -u github.com/golang/lint/golint
   - go get -u gopkg.in/alecthomas/gometalinter.v1
