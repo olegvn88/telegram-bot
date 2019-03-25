@@ -1,0 +1,6 @@
+aa73fc95-2e35-43c7-aa04-577ea6978469
+
+dpl --provider=heroku --app=bot --api-key=$token --skip_cleanup
+golint src
+
+gometalinter
