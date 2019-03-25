@@ -4,6 +4,9 @@ go:
   - 1.11
 
 before_install:
+  - apt-get update -y
+  - apt-get install ruby -y
+  - gem install dpl
   - go get github.com/constabulary/gb/...
   - go get -u github.com/golang/lint/golint
   - go get -u gopkg.in/alecthomas/gometalinter.v1
