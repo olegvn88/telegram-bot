@@ -27,7 +27,8 @@ const jokeUrl = "http://api.icndb.com/jokes/random?limitTo=[nerdy]"
 func main() {
 	// Heroku прокидывает порт для приложения в переменную окружения PORT
 	port := os.Getenv("PORT")
-	bot, err := tgbotapi.NewBotAPI(ParseJson().Token)
+	//bot, err := tgbotapi.NewBotAPI(ParseJson().Token)
+	bot, err := tgbotapi.NewBotAPI("735585631:AAEyopXfFtcaZj3wD59G_JYmQabs-WwNj-g")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -81,7 +82,7 @@ func main() {
 }
 
 func ParseJson() JsonData {
-	jData, err := ioutil.ReadFile("/home/onest/go/src/github.com/olegvn88/bot/src/main/propreties.config")
+	jData, err := ioutil.ReadFile("./properties.config")
 	if err != nil {
 		panic(err)
 	}
