@@ -2,9 +2,9 @@ package main
 
 import (
 	"encoding/json"
-	"github.com/olegvn88/bot/src/joke"
 	"gopkg.in/telegram-bot-api.v4"
 	"io/ioutil"
+	"joke"
 	"log"
 	"net/http"
 	"os"

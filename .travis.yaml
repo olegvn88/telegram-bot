@@ -1,0 +1,17 @@
+language go
+
+go:
+  - 1.11
+
+before_install:
+  - go get github.com/constabulary/gb/...
+  - go get -u github.com/golang/lint/golint
+  - go get -u gopkg.in/alecthomas/gometalinter.v1
+  - go get -u github.com/golangci/golangci-lint/cmd/golangci-lint
+
+deploy:
+  provider: heroku
+  api_key:
+    secure: "29dfc68a-b8e1-4eef-a04b-98baf7ff47e8"
+  app: english891
+  skip_leanup: true
